@@ -1,6 +1,11 @@
 <template>
   <h2>Counter</h2>
-  <p>{{ count }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
 </template>
 
 <script>
@@ -8,8 +13,13 @@ export default {
   name: "Counter",
   data() {
     return {
-      count: 0,
+      count: 5,
     };
+  },
+  computed: {
+    squaredCount() {
+      return this.count ** 2;
+    },
   },
 };
 </script>
