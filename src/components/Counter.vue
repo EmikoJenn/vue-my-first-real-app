@@ -1,11 +1,14 @@
 <template>
   <h2>Counter</h2>
   <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
-  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
-  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
-  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
-  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
-  <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
+
+  <div>
+    <h3>{{ count }}</h3>
+    <div class="btn-group">
+      <button @click="increase">+1</button>
+      <button @click="decrease">-1</button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,6 +19,14 @@ export default {
       count: 5,
     };
   },
+  methods: {
+    increase() {
+      this.count++;
+    },
+    decrease() {
+      this.count--;
+    },
+  },
   computed: {
     squaredCount() {
       return this.count ** 2;
@@ -24,4 +35,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+</style>
