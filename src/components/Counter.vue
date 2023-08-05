@@ -1,5 +1,5 @@
 <template>
-  <h2>Counter</h2>
+  <h2>{{ header }} Counter</h2>
   <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
 
   <div>
@@ -14,6 +14,12 @@
 <script>
 export default {
   name: "Counter",
+  props: {
+    header: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       count: 5,

@@ -1,4 +1,7 @@
-<template><Counter /></template>
+<template>
+  <Counter header="Log In" />
+  <Counter header="Log Out" />
+</template>
 
 <script>
 import Counter from "@/components/Counter.vue";
