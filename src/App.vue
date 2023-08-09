@@ -1,16 +1,25 @@
 <template>
-  <Counter header="Counter" />
+  <indecision />
 </template>
 
 <script>
-import Counter from "@/components/Counter.vue";
+import Indecision from "./components/Indecision.vue";
 
 export default {
   name: "App",
   components: {
-    Counter,
+    Indecision,
   },
 };
 </script>
 
-<style></style>
+<style>
+html,
+body {
+  background-color: black;
+}
+body {
+  text-align: center;
+  padding: 10rem;
+}
+</style>
