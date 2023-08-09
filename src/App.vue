@@ -1,6 +1,5 @@
 <template>
-  <Counter header="Log In" />
-  <Counter header="Log Out" />
+  <Counter header="Counter" />
 </template>
 
 <script>

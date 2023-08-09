@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ header }} Counter</h2>
+  <h2>{{ header }}</h2>
   <p>{{ count }}<sup>2</sup> = {{ squaredCount }}</p>
 
   <div>
@@ -19,10 +19,17 @@ export default {
       type: String,
       required: true,
     },
+    start: {
+      type: Number,
+      default: 100,
+      validator(val) {
+        return val >= 10;
+      },
+    },
   },
   data() {
     return {
-      count: 5,
+      count: this.start ?? 5,
     };
   },
   methods: {
